@@ -25,7 +25,7 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
             file.mkdirs();
         }
         registry.addResourceHandler("/upload/**")
-                .addResourceLocations("file:"+"D://upload/");
-//                  .addResourceLocations("file:"+dirPath);
+//                .addResourceLocations("file:"+"D://upload/");
+                  .addResourceLocations("file:"+dirPath);
     }
 }

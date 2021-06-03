@@ -44,5 +44,5 @@ logging:
     com.bm.coursemanage.dao: debug
 
 image:
-  dirpath: "D://upload/"
-  webpath: "http://localhost:8383/upload"
+  dirpath: "/usr/upload/"
+  webpath: "http://120.78.151.130:8383/upload"

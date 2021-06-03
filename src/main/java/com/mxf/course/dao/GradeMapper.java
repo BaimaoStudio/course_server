@@ -28,4 +28,10 @@ public interface GradeMapper extends CommMapper<GradeEntity> {
             "</script>")
     List<GradeEntity> selectGradeByConditions(@Param("gradename")String gradename,
                                               @Param("year")String year);
+
+    @Select("select * from yz_jxgl_grade where schoolid = #{schoolid}")
+    List<GradeEntity> selectGradesBySchoolId(@Param("schoolid")int schoolId);
+
+    @Select("select count(0) from yz_jxgl_grade where schoolid = #{schoolid}")
+    Integer selectGradeCountBySchoolId(@Param("schoolid")int schoolid);
 }

@@ -1,5 +1,7 @@
 package com.mxf.course.config;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Configuration;
 
 import javax.servlet.*;
@@ -15,8 +17,11 @@ import java.io.IOException;
 @WebFilter(filterName = "CorsFilter ")
 @Configuration
 public class CORSFilter implements Filter {
+
+    Logger logger = LoggerFactory.getLogger(CORSFilter.class);
     @Override
     public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
+        logger.debug("===============执行跨域过滤器=============");
         HttpServletResponse response = (HttpServletResponse) res;
         response.setHeader("Access-Control-Allow-Origin","*");
         response.setHeader("Access-Control-Allow-Credentials", "true");

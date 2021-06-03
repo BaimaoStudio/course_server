@@ -7,20 +7,20 @@ import javax.persistence.Table;
 @Table(name = "yz_jxgl_student")
 public class StudentEntity {
   @Id
-  private long id;
+  private int id;
 
-  private long uid;
-  private long classid;
-  private long gradeid;
-  private long schoolid;
-  private long worksnum;
-  private long expiredate;
-  private long regtime;
+  private int uid;
+  private int classid;
+  private int gradeid;
+  private int schoolid;
+  private int worksnum;
+  private int expiredate;
+  private int regtime;
 
     public StudentEntity() {
     }
 
-    public StudentEntity(long id, long uid, long classid, long gradeid, long schoolid, long worksnum, long expiredate, long regtime) {
+    public StudentEntity(int id, int uid, int classid, int gradeid, int schoolid, int worksnum, int expiredate, int regtime) {
         this.id = id;
         this.uid = uid;
         this.classid = classid;
@@ -31,74 +31,74 @@ public class StudentEntity {
         this.regtime = regtime;
     }
 
-    public long getId() {
+    public int getId() {
     return id;
   }
 
-  public void setId(long id) {
+  public void setId(int id) {
     this.id = id;
   }
 
 
-  public long getUid() {
+  public int getUid() {
     return uid;
   }
 
-  public void setUid(long uid) {
+  public void setUid(int uid) {
     this.uid = uid;
   }
 
 
-  public long getClassid() {
+  public int getClassid() {
     return classid;
   }
 
-  public void setClassid(long classid) {
+  public void setClassid(int classid) {
     this.classid = classid;
   }
 
 
-  public long getGradeid() {
+  public int getGradeid() {
     return gradeid;
   }
 
-  public void setGradeid(long gradeid) {
+  public void setGradeid(int gradeid) {
     this.gradeid = gradeid;
   }
 
 
-  public long getSchoolid() {
+  public int getSchoolid() {
     return schoolid;
   }
 
-  public void setSchoolid(long schoolid) {
+  public void setSchoolid(int schoolid) {
     this.schoolid = schoolid;
   }
 
 
-  public long getWorksnum() {
+  public int getWorksnum() {
     return worksnum;
   }
 
-  public void setWorksnum(long worksnum) {
+  public void setWorksnum(int worksnum) {
     this.worksnum = worksnum;
   }
 
 
-  public long getExpiredate() {
+  public int getExpiredate() {
     return expiredate;
   }
 
-  public void setExpiredate(long expiredate) {
+  public void setExpiredate(int expiredate) {
     this.expiredate = expiredate;
   }
 
 
-  public long getRegtime() {
+  public int getRegtime() {
     return regtime;
   }
 
-  public void setRegtime(long regtime) {
+  public void setRegtime(int regtime) {
     this.regtime = regtime;
   }
 

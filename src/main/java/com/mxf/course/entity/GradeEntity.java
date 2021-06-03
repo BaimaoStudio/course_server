@@ -8,21 +8,21 @@ import javax.persistence.Table;
 public class GradeEntity {
 
     @Id
-  private long id;
+  private int id;
   private String gradename;
   private String type;
-  private long year;
-  private long readsortid;
-  private long schoolid;
-  private long classnum;
-  private long studentnum;
-  private long creatdate;
-  private long expiredate;
+  private int year;
+  private int readsortid;
+  private int schoolid;
+  private int classnum;
+  private int studentnum;
+  private int creatdate;
+  private int expiredate;
 
     public GradeEntity() {
     }
 
-    public GradeEntity(long id, String gradename, String type, long year, long readsortid, long schoolid, long classnum, long studentnum, long creatdate, long expiredate) {
+    public GradeEntity(int id, String gradename, String type, int year, int readsortid, int schoolid, int classnum, int studentnum, int creatdate, int expiredate) {
         this.id = id;
         this.gradename = gradename;
         this.type = type;
@@ -35,11 +35,11 @@ public class GradeEntity {
         this.expiredate = expiredate;
     }
 
-    public long getId() {
+    public int getId() {
     return id;
   }
 
-  public void setId(long id) {
+  public void setId(int id) {
     this.id = id;
   }
 
@@ -62,65 +62,65 @@ public class GradeEntity {
   }
 
 
-  public long getYear() {
+  public int getYear() {
     return year;
   }
 
-  public void setYear(long year) {
+  public void setYear(int year) {
     this.year = year;
   }
 
 
-  public long getReadsortid() {
+  public int getReadsortid() {
     return readsortid;
   }
 
-  public void setReadsortid(long readsortid) {
+  public void setReadsortid(int readsortid) {
     this.readsortid = readsortid;
   }
 
 
-  public long getSchoolid() {
+  public int getSchoolid() {
     return schoolid;
   }
 
-  public void setSchoolid(long schoolid) {
+  public void setSchoolid(int schoolid) {
     this.schoolid = schoolid;
   }
 
 
-  public long getClassnum() {
+  public int getClassnum() {
     return classnum;
   }
 
-  public void setClassnum(long classnum) {
+  public void setClassnum(int classnum) {
     this.classnum = classnum;
   }
 
 
-  public long getStudentnum() {
+  public int getStudentnum() {
     return studentnum;
   }
 
-  public void setStudentnum(long studentnum) {
+  public void setStudentnum(int studentnum) {
     this.studentnum = studentnum;
   }
 
 
-  public long getCreatdate() {
+  public int getCreatdate() {
     return creatdate;
   }
 
-  public void setCreatdate(long creatdate) {
+  public void setCreatdate(int creatdate) {
     this.creatdate = creatdate;
   }
 
 
-  public long getExpiredate() {
+  public int getExpiredate() {
     return expiredate;
   }
 
-  public void setExpiredate(long expiredate) {
+  public void setExpiredate(int expiredate) {
     this.expiredate = expiredate;
   }
 

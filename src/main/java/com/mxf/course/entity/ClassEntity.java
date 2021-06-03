@@ -7,21 +7,21 @@ import javax.persistence.Table;
 public class ClassEntity {
 
   @Id
-  private long id;
+  private int id;
   private String classname;
   private String sketch;
-  private long readsortid;
-  private long stugroupid;
-  private long teacherids;
-  private long gradeid;
-  private long schoolid;
+  private int readsortid;
+  private int stugroupid;
+  private int teacherids;
+  private int gradeid;
+  private int schoolid;
   private String courseids;
-  private long studentnumReg;
-  private long studentnumAct;
-  private long creatdate;
-  private long expiredate;
+  private int studentnumReg;
+  private int studentnumAct;
+  private int creatdate;
+  private int expiredate;
 
-    public ClassEntity(long id, String classname, String sketch, long readsortid, long stugroupid, long teacherids, long gradeid, long schoolid, String courseids, long studentnumReg, long studentnumAct, long creatdate, long expiredate) {
+    public ClassEntity(int id, String classname, String sketch, int readsortid, int stugroupid, int teacherids, int gradeid, int schoolid, String courseids, int studentnumReg, int studentnumAct, int creatdate, int expiredate) {
         this.id = id;
         this.classname = classname;
         this.sketch = sketch;
@@ -40,11 +40,11 @@ public class ClassEntity {
     public ClassEntity() {
     }
 
-    public long getId() {
+    public int getId() {
     return id;
   }
 
-  public void setId(long id) {
+  public void setId(int id) {
     this.id = id;
   }
 
@@ -67,47 +67,47 @@ public class ClassEntity {
   }
 
 
-  public long getReadsortid() {
+  public int getReadsortid() {
     return readsortid;
   }
 
-  public void setReadsortid(long readsortid) {
+  public void setReadsortid(int readsortid) {
     this.readsortid = readsortid;
   }
 
 
-  public long getStugroupid() {
+  public int getStugroupid() {
     return stugroupid;
   }
 
-  public void setStugroupid(long stugroupid) {
+  public void setStugroupid(int stugroupid) {
     this.stugroupid = stugroupid;
   }
 
 
-  public long getTeacherids() {
+  public int getTeacherids() {
     return teacherids;
   }
 
-  public void setTeacherids(long teacherids) {
+  public void setTeacherids(int teacherids) {
     this.teacherids = teacherids;
   }
 
 
-  public long getGradeid() {
+  public int getGradeid() {
     return gradeid;
   }
 
-  public void setGradeid(long gradeid) {
+  public void setGradeid(int gradeid) {
     this.gradeid = gradeid;
   }
 
 
-  public long getSchoolid() {
+  public int getSchoolid() {
     return schoolid;
   }
 
-  public void setSchoolid(long schoolid) {
+  public void setSchoolid(int schoolid) {
     this.schoolid = schoolid;
   }
 
@@ -121,38 +121,38 @@ public class ClassEntity {
   }
 
 
-  public long getStudentnumReg() {
+  public int getStudentnumReg() {
     return studentnumReg;
   }
 
-  public void setStudentnumReg(long studentnumReg) {
+  public void setStudentnumReg(int studentnumReg) {
     this.studentnumReg = studentnumReg;
   }
 
 
-  public long getStudentnumAct() {
+  public int getStudentnumAct() {
     return studentnumAct;
   }
 
-  public void setStudentnumAct(long studentnumAct) {
+  public void setStudentnumAct(int studentnumAct) {
     this.studentnumAct = studentnumAct;
   }
 
 
-  public long getCreatdate() {
+  public int getCreatdate() {
     return creatdate;
   }
 
-  public void setCreatdate(long creatdate) {
+  public void setCreatdate(int creatdate) {
     this.creatdate = creatdate;
   }
 
 
-  public long getExpiredate() {
+  public int getExpiredate() {
     return expiredate;
   }
 
-  public void setExpiredate(long expiredate) {
+  public void setExpiredate(int expiredate) {
     this.expiredate = expiredate;
   }
 

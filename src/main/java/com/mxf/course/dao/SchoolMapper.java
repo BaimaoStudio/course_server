@@ -42,4 +42,10 @@ public interface SchoolMapper extends CommMapper<SchoolEntity> {
                                                       @Param("district")String district);
 
 
+    @Select("select * from yz_jxgl_school order by creatdate desc")
+    List<SchoolEntity> selectAllSchool();
+
+    @Select("select * from yz_jxgl_school where id = (" +
+            "select schoolid from yz_jxgl_grade where id = #{gradeId})")
+    SchoolEntity selectSchoolByGradeId(@Param("gradeId")int gradeId);
 }

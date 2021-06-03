@@ -1,68 +1,88 @@
 package com.mxf.course.entity;
 
 
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Table(name = "yz_jxgl_course")
 public class CourseEntity {
 
-  private long id;
+    @Id
+  private int id;
   private String coursename;
   private String sketch;
-  private long sortid;
+  private int sortid;
   private String logourl;
   private String quanxian;
 
+  private String content;
 
-  public long getId() {
-    return id;
-  }
+    public CourseEntity(int id, String coursename, String sketch, int sortid, String logourl, String quanxian, String content) {
+        this.id = id;
+        this.coursename = coursename;
+        this.sketch = sketch;
+        this.sortid = sortid;
+        this.logourl = logourl;
+        this.quanxian = quanxian;
+        this.content = content;
+    }
 
-  public void setId(long id) {
-    this.id = id;
-  }
+    public CourseEntity() {
+    }
 
+    public int getId() {
+        return id;
+    }
 
-  public String getCoursename() {
-    return coursename;
-  }
+    public void setId(int id) {
+        this.id = id;
+    }
 
-  public void setCoursename(String coursename) {
-    this.coursename = coursename;
-  }
+    public String getCoursename() {
+        return coursename;
+    }
 
+    public void setCoursename(String coursename) {
+        this.coursename = coursename;
+    }
 
-  public String getSketch() {
-    return sketch;
-  }
+    public String getSketch() {
+        return sketch;
+    }
 
-  public void setSketch(String sketch) {
-    this.sketch = sketch;
-  }
+    public void setSketch(String sketch) {
+        this.sketch = sketch;
+    }
 
+    public int getSortid() {
+        return sortid;
+    }
 
-  public long getSortid() {
-    return sortid;
-  }
+    public void setSortid(int sortid) {
+        this.sortid = sortid;
+    }
 
-  public void setSortid(long sortid) {
-    this.sortid = sortid;
-  }
+    public String getLogourl() {
+        return logourl;
+    }
 
+    public void setLogourl(String logourl) {
+        this.logourl = logourl;
+    }
 
-  public String getLogourl() {
-    return logourl;
-  }
+    public String getQuanxian() {
+        return quanxian;
+    }
 
-  public void setLogourl(String logourl) {
-    this.logourl = logourl;
-  }
+    public void setQuanxian(String quanxian) {
+        this.quanxian = quanxian;
+    }
 
+    public String getContent() {
+        return content;
+    }
 
-  public String getQuanxian() {
-    return quanxian;
-  }
-
-  public void setQuanxian(String quanxian) {
-    this.quanxian = quanxian;
-  }
-
+    public void setContent(String content) {
+        this.content = content;
+    }
 }

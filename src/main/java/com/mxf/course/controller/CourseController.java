@@ -2,12 +2,14 @@ package com.mxf.course.controller;
 
 import com.mxf.course.config.BaseController;
 import com.mxf.course.config.ScExtException;
+import com.mxf.course.entity.CourseEntity;
 import com.mxf.course.service.CourseService;
 import com.mxf.course.util.FileUtil;
 import com.mxf.course.util.UUIDGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -65,5 +67,29 @@ public class CourseController extends BaseController {
         String url = webpath+"/"+fileName;
         return toJson(url,request);
     }
+    @RequestMapping("insertCourse")
+    public @ResponseBody String insertCourse(@RequestBody CourseEntity courseEntity,
+                                             HttpServletRequest request) throws Exception {
+        return toJson(courseService.insertCourse(courseEntity),request);
+    }
+
+    @RequestMapping("updateCourse")
+    public @ResponseBody String updateCourse(@RequestBody CourseEntity courseEntity,
+                                             HttpServletRequest request) throws Exception {
+        return toJson(courseService.updateCourse(courseEntity),request);
+    }
+
+    @RequestMapping("selectOneCourse")
+    public @ResponseBody String selectOneCourse(@RequestParam("id")int id,
+                                                HttpServletRequest request){
+        return toJson(courseService.selectOneCourse(id),request);
+    }
+
+    @RequestMapping("deleteCourse")
+    public @ResponseBody String deleteCourse(@RequestParam("id")int id,
+                                             HttpServletRequest request) throws ScExtException {
+        return toJson(courseService.deleteCourse(id),request);
+    }
+
 
 }

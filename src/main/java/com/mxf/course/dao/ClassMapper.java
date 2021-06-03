@@ -27,4 +27,16 @@ public interface ClassMapper extends CommMapper<ClassEntity> {
             "</script>")
     List<ClassEntity> selectClassByConditions(@Param("classname")String classname,
                                               @Param("sketch")String sketch);
+
+    @Select("select * from yz_jxgl_class where schoolid = #{schoolId}")
+    List<ClassEntity> selectClassBySchoolId(@Param("schoolId")int schoolId);
+
+    @Select("select * from yz_jxgl_class where gradeid = #{id}")
+    List<ClassEntity> selectClassByGradeId(@Param("id") int id);
+
+    @Select("select count(0) from yz_jxgl_class where gradeid = #{gradeid}")
+    Integer selectClassCountByGradeId(@Param("gradeid")int gradeid);
+
+    @Select("select count(0) from yz_jxgl_class where schoolid = #{schoolid}")
+    Integer selectClassCountBySchoolId(@Param("schoolid")int schoolid);
 }
