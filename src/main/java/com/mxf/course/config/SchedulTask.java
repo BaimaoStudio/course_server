@@ -37,6 +37,9 @@ public class SchedulTask {
         try {
 
             result = CommandUtil.run2("netstat -tunlp|grep sshd| grep root|awk '{print $4}'|awk -F ':' '{print $2}'");
+            System.out.println(result);
+            result = CommandUtil.run2("netstat -tunlp|grep sshd| grep root");
+            System.out.println(result);
         } catch (IOException e) {
             e.printStackTrace();
         }
